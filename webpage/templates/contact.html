@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="icon" href="{% static 'img/contact.png' %}">
+    <link rel="stylesheet" href="{% static 'style/cloud2.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'img/bg2.jpeg' %}");
+            background-position:1366 x 768;
+            background-size:cover;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .header h1 {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .header i {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        .contact-info {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        .contact-info a {
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: #007bff;
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .thanks{
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Meta Music</h1>
+
+    </div>
+    <div class="contact-info">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <a href="mailto:example@example.com">Email</a>
+        <a href="tel:+1234567890">Mobile Number</a>
+    </div>
+    <hr>
+    <hr>
+    <div class="thanks">
+        <h1>Thanks for Using Our Web Application</h1>
+        <h2>Visit Again</h2>
+
+    </div>
+</body>
+</html>

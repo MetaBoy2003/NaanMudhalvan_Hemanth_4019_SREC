@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Meta Music</title>
+    <link rel="icon" href="{% static 'img/bg1.jpg' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url("{% static 'img/bg2.jpeg' %}");
+            background-position: center;
+            background-size: 1366 x 768px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            opacity: 100%;
+        }
+        .song {
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 300px; /* Adjusted height */
+        }
+        .song img {
+            width: 100%;
+            height: 55%; /* Adjusted height */
+            object-fit: cover;
+        }
+        .song-info {
+            padding: 10px;
+        }
+        .song-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .artist {
+            color:white;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-container {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .upload-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'img/icon.png' %}" alt="Meta Music Icon">
+        <h1>Meta Music</h1>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Type Here to Search...">
+        <button type="button">Search</button>
+    </div>
+    <div class="upload-container">
+        <a href="upload.html"><button>Upload</button></a>
+    </div>
+    <div class="container">
+        <!-- First row -->
+        <div class="song">
+            <img src="{% static 'songs/S1,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">STAY</div>
+                <div class="artist">JUSTIN BIEBER, THE KID LAROI</div>
+                <audio controls>
+                    <source src="{% static 'songs/s1.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="song">
+            <img src="{% static 'songs/s2,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">PANDA</div>
+                <div class="artist">Desiigner</div>
+                <audio controls>
+                    <source src="{% static 'songs/s2.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="song">
+            <img src="{% static 'songs/s3,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">See You Again</div>
+                <div class="artist">Wiz Khalifa</div>
+                <audio controls>
+                    <source src="{% static 'songs/s3.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="song">
+            <img src="{% static 'songs/s4,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">Heat Waves</div>
+                <div class="artist">Glass Animals</div>
+                <audio controls>
+                    <source src="{% static 'songs/s4.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="song">
+            <img src="{% static 'songs/s5,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">Mocking Bird</div>
+                <div class="artist">Eminem</div>
+                <audio controls>
+                    <source src="{% static 'songs/s5.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="song">
+            <img src="{% static 'songs/s6,img.jpg' %}" alt="">
+            <div class="song-info">
+                <div class="song-title">Shape Of You</div>
+                <div class="artist">Ed Sheeran</div>
+                <audio controls>
+                    <source src="{% static 'songs/s6.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <!-- Add more songs similarly -->
+    </div>
+</body>
+</html>

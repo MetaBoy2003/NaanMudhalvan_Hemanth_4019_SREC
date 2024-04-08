@@ -1,0 +1,134 @@
+/* signup.css */
+
+/* Body styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333; /* Text color */
+    background-image: url("{% static 'img/bg2.jpg' %}");
+    background-size: cover;
+    background-position: 1366px 768px;
+}
+
+/* Container styles */
+.container {
+    padding: 16px;
+}
+
+/* Header styles */
+h1 {
+    color: #333; /* Heading color */
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+p {
+    color: #666; /* Text color */
+    margin-bottom: 15px;
+}
+
+/* Form input styles */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/* Cancel button styles */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #c3c4bf;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Clearfix styles */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 50px;
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Horizontal ruler styles */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Responsive styles for cancel and signup buttons on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}

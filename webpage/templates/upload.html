@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload - Meta Music</title>
+    <link rel="icon" href="{% static 'img/upload icon.png' %}">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333; /* Text color */
+            background-image: url("{% static 'img/bg1.jpg' %}");
+            background-size: cover;
+            background-position: 1366 x 768px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password], input[type=file] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            font-family: Arial, sans-serif; /* Added font-family */
+        }
+
+        /* Add a background color when the inputs get focus */
+        input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #ff7200; /* Changed button color */
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            font-family: Arial, sans-serif; /* Added font-family */
+        }
+
+        button:hover {
+            opacity:1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #c3c4bf;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: block; /* Modal displayed by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto; /* 10% from the top and centered */
+            border: 1px solid #888;
+            width: 80%; /* 80% of the screen width */
+            max-width: 400px; /* Maximum width */
+            height: auto; /* Auto height */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+        .close:hover, .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn, .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="/upload_song.php" method="post" enctype="multipart/form-data">
+        <div class="container">
+            <h1 style="color: #333; font-family: 'Arial Black', sans-serif;">Upload Songs</h1>
+            <p style="color: #666;">Fill this form to upload your songs🎶.</p>
+            <hr>
+            <label for="song_title" style="color: #333;"><b>Song Title</b></label>
+            <input type="text" placeholder="Enter Song Title" name="song_title" required>
+
+            <label for="artist" style="color: #333;"><b>Artist</b></label>
+            <input type="text" placeholder="Enter Artist Name" name="artist" required>
+
+            <label for="song_image" style="color: #333;"><b>Song Image</b></label>
+            <input type="file" name="song_image" accept="image/*" required>
+
+            <label for="file" style="color: #333;"><b>Choose Song File</b></label>
+            <input type="file" name="file" accept=".mp3,.wav" required>
+
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Upload</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+

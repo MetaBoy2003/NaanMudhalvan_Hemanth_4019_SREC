@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Music Blog</title>
+    <link rel="stylesheet" href="{% static 'style/cloud.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'img/bg1.jpg' %}");
+            background-position: 1366 x 768px;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            
+        }
+        .post {
+            background-color: rgba(255, 255, 255, 0.4); /* Opacity of 60% */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .post h2 {
+            color: black;
+        }
+        .post-info {
+            color: black;
+            margin-bottom: 10px;
+        }
+        .post-content {
+            color: black;
+            line-height: 1.6;
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .post-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .logo-container h1 {
+            margin: 0;
+            color: #fff;
+        }
+        .blog{
+            color: white;
+            text-align: center;
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{% static 'img/icon.png' %}" alt="Meta Music Logo">
+        <h1>Meta Music</h1>
+    </div>
+    <div class="blog">
+        <h2>BLOG'S</h2>
+    </div>
+    <div class="container">
+        <div class="post">
+            <h2>Discover the Latest Music Trends</h2>
+            <div class="post-info">
+                <span><i class="far fa-calendar-alt"></i> September 15, 2024</span>
+                <span><i class="far fa-user"></i> Meta Music</span>
+            </div>
+            <div class="post-content">
+                <p>Welcome to the Meta Music blog! Here you'll find articles about the latest music trends, artist interviews, album reviews, and much more.</p>
+                <p>Stay tuned for updates on upcoming music releases, industry news, and exclusive behind-the-scenes content.</p>
+                <p>Feel free to explore our blog and leave comments to share your thoughts and opinions!</p>
+                <p>Thanks for reading,</p>
+                <p>The Meta Music Team</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <h2>Interview with Rising Star Artist</h2>
+            <div class="post-info">
+                <span><i class="far fa-calendar-alt"></i> September 10, 2024</span>
+                <span><i class="far fa-user"></i> Meta Music</span>
+            </div>
+            <div class="post-content">
+                <p>Don't miss our exclusive interview with up-and-coming artist John Smith. Learn about his musical journey, influences, and upcoming projects.</p>
+                <p>Discover what inspires John's music and get a sneak peek into his creative process. Plus, listen to his latest singles and watch behind-the-scenes footage from his studio sessions.</p>
+                <p>Stay tuned for more interviews with talented artists from around the world!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Meta Music. All rights reserved.</p>
+    </div>
+</body>
+</html>
